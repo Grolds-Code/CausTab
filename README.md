@@ -39,6 +39,8 @@ $$
 
 Full derivation in the paper.
 
+---
+
 ## Critical Results
 
 ### 1. Synthetic Data
