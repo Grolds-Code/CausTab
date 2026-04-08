@@ -80,4 +80,4 @@ Removing or replacing components of CausTab has minimal impact on performance, c
 
 ## License
 
-MIT License. See LICENSE file.
+This project is licensed under the MIT License. See `LICENSE` for details.
