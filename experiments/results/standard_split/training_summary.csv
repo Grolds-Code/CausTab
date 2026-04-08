@@ -1,0 +1,4 @@
+Model,Epochs,Learning_rate,Final_loss,Training_time_s
+ERM,150,0.001,0.4944,10.9
+IRM,150,0.001,0.5003,9.2
+CausTab,150,0.001,0.4952,19.3

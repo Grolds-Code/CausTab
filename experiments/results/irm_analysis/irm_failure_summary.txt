@@ -1,0 +1,25 @@
+IRM Failure Analysis — Summary
+=================================================================
+
+1. Penalty Collapse
+----------------------------------------
+  Regime_1_Causal_Dominant
+    IRM penalty: 0.004683 → 0.002901 (38% reduction)
+    CausTab stays active: False
+  Regime_2_Mixed
+    IRM penalty: 0.018943 → 0.007080 (63% reduction)
+    CausTab stays active: False
+  Regime_3_Spurious_Dominant
+    IRM penalty: 0.037747 → 0.047353 (-25% reduction)
+    CausTab stays active: False
+
+2. Performance at Complete Shift
+----------------------------------------
+  Strength        ERM        IRM      CausTab  IRM-ERM gap
+       0.5     0.9346     0.9187       0.9347      -0.0159
+       1.0     0.9256     0.8745       0.9258      -0.0511
+       1.5     0.9021     0.7884       0.9022      -0.1137
+       2.0     0.8646     0.7303       0.8648      -0.1343
+       2.5     0.8271     0.6890       0.8274      -0.1382
+       3.0     0.7954     0.6762       0.7957      -0.1192
+       4.0     0.7559     0.6846       0.7562      -0.0714

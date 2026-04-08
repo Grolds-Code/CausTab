@@ -1,0 +1,10 @@
+Regime,SDI,Model,Mean_AUC,Std_AUC,N_seeds
+Regime_1_Causal_Dominant,1.6662,ERM,0.9355,0.005,5
+Regime_1_Causal_Dominant,1.6662,IRM,0.9254,0.0055,5
+Regime_1_Causal_Dominant,1.6662,CausTab,0.9355,0.0051,5
+Regime_2_Mixed,9.6211,ERM,0.9165,0.0056,5
+Regime_2_Mixed,9.6211,IRM,0.8397,0.0128,5
+Regime_2_Mixed,9.6211,CausTab,0.9165,0.0055,5
+Regime_3_Spurious_Dominant,48.0775,ERM,0.7664,0.0078,5
+Regime_3_Spurious_Dominant,48.0775,IRM,0.7055,0.0216,5
+Regime_3_Spurious_Dominant,48.0775,CausTab,0.7673,0.0075,5

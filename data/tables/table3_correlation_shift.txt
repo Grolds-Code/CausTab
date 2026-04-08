@@ -1,0 +1,19 @@
+Table 3. Feature-outcome correlation by NHANES survey cycle
+Note: Range = max - min correlation across cycles.
+      Low range = causally stable. High range = spurious/mixed.
+=====================================================================================
+Feature                         2011-12    2013-14    2015-16    2017-18    Range  Signal type
+-------------------------------------------------------------------------------------
+Age (years)                      0.4374     0.4295     0.4228     0.4233   0.0146     Causal
+Gender (1=M, 2=F)                0.0008     0.0106    -0.0119    -0.0351   0.0457 **  Spurious/mixed
+BMI (kg/m²)                      0.2327     0.2118     0.2066     0.1941   0.0386 **  Spurious/mixed
+Waist circumference (cm)         0.2891     0.2729     0.2716     0.2693   0.0198     Causal
+Systolic BP 1 (mmHg)             0.3925     0.3803     0.3676     0.3799   0.0249 **  Spurious/mixed
+Diastolic BP 1 (mmHg)            0.1081     0.0820     0.0549     0.0800   0.0531 **  Spurious/mixed
+Systolic BP 2 (mmHg)             0.3859     0.3770     0.3666     0.3737   0.0193     Causal
+Diastolic BP 2 (mmHg)            0.0838     0.0689     0.0272     0.0770   0.0566 **  Spurious/mixed
+Income-to-poverty ratio         -0.0479    -0.0336    -0.0621     0.0064   0.0685 **  Spurious/mixed
+Education level                 -0.1424    -0.0873    -0.0966    -0.0474   0.0950 **  Spurious/mixed
+Race/ethnicity                  -0.0300    -0.0094    -0.0132     0.0206   0.0506 **  Spurious/mixed
+-------------------------------------------------------------------------------------
+** Flags features with correlation range > 0.02 across cycles

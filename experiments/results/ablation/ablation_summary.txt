@@ -1,0 +1,24 @@
+CausTab Ablation Study — Summary
+=================================================================
+
+Synthetic Data (mean AUC ± std, 5 seeds)
+-----------------------------------------------------------------
+Variant                                  R11                R22                R33
+-----------------------------------------------------------------
+CausTab_Full                    0.935±0.005★       0.916±0.006★       0.767±0.007★
+CausTab_NoAnneal                0.935±0.005        0.916±0.006        0.767±0.008 
+CausTab_NoWarmup                0.936±0.005        0.916±0.005        0.767±0.008 
+CausTab_MeanPenalty             0.935±0.005        0.919±0.005        0.770±0.007 
+CausTab_NoPenalty               0.935±0.005        0.916±0.006        0.767±0.008 
+
+NHANES Temporal Split B
+-----------------------------------------------------------------
+Variant                            AUC          ECE
+-----------------------------------------------------------------
+CausTab_Full                  0.8139      0.0244 ★
+CausTab_NoAnneal              0.8140      0.0252  
+CausTab_NoWarmup              0.8139      0.0242  
+CausTab_MeanPenalty           0.8139      0.0250  
+CausTab_NoPenalty             0.8140      0.0245  
+
+★ = proposed full method

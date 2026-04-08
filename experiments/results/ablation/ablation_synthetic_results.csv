@@ -1,0 +1,16 @@
+Regime,Variant,Mean_AUC,Std_AUC
+Regime_1_Causal_Dominant,CausTab_Full,0.9355,0.005
+Regime_1_Causal_Dominant,CausTab_NoAnneal,0.9355,0.0051
+Regime_1_Causal_Dominant,CausTab_NoWarmup,0.9355,0.0052
+Regime_1_Causal_Dominant,CausTab_MeanPenalty,0.9354,0.005
+Regime_1_Causal_Dominant,CausTab_NoPenalty,0.9355,0.0051
+Regime_2_Mixed,CausTab_Full,0.9165,0.0056
+Regime_2_Mixed,CausTab_NoAnneal,0.9165,0.0056
+Regime_2_Mixed,CausTab_NoWarmup,0.9164,0.0055
+Regime_2_Mixed,CausTab_MeanPenalty,0.9186,0.0054
+Regime_2_Mixed,CausTab_NoPenalty,0.9165,0.0056
+Regime_3_Spurious_Dominant,CausTab_Full,0.767,0.0073
+Regime_3_Spurious_Dominant,CausTab_NoAnneal,0.767,0.0078
+Regime_3_Spurious_Dominant,CausTab_NoWarmup,0.7667,0.0077
+Regime_3_Spurious_Dominant,CausTab_MeanPenalty,0.7699,0.0074
+Regime_3_Spurious_Dominant,CausTab_NoPenalty,0.767,0.0077

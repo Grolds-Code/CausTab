@@ -1,0 +1,6 @@
+Variant,Mean_AUC,Std_AUC,Mean_ECE,Std_ECE
+CausTab_Full,0.8139,0.0003,0.0244,0.0012
+CausTab_NoAnneal,0.814,0.0004,0.0252,0.0013
+CausTab_NoWarmup,0.8139,0.0004,0.0242,0.0013
+CausTab_MeanPenalty,0.8139,0.0003,0.025,0.0008
+CausTab_NoPenalty,0.814,0.0003,0.0245,0.0014

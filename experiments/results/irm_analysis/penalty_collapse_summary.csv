@@ -1,0 +1,4 @@
+Regime,IRM_initial_penalty,IRM_final_penalty,IRM_collapse_pct,CausTab_max_penalty,CausTab_stays_active
+Regime_1_Causal_Dominant,0.004683,0.002901,38.1,1e-06,False
+Regime_2_Mixed,0.018943,0.00708,62.6,0.0,False
+Regime_3_Spurious_Dominant,0.037747,0.047353,-25.4,0.0,False
