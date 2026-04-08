@@ -2,8 +2,6 @@
 
 Grold Otieno Mboya
 
-Department of Epidemiology and Biostatistics, Jaramogi Oginga Odinga University of Science and Technology, Kenya
-
 ---
 
 ## Abstract
