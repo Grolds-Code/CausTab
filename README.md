@@ -13,7 +13,7 @@ Grold Otieno Mboya
 
 Standard machine learning models fail under distribution shift because they exploit spurious correlations that vary across environments. CausTab penalizes the variance of parameter gradients across training environments. Parameters responding to causal features receive consistent gradient signals and are not penalized. Parameters responding to spurious features receive inconsistent signals and are penalized.
 
-Across four the cycles of NHANES (16,773 participants), the UCI Heart Disease dataset (920 patients), and the synthetic data, CausTab matches or exceeds empirical risk minimization (ERM) in every experimental condition. Invariant Risk Minimization (IRM) degrades by up to 13.8 AUC points on spurious-dominant tabular data due to penalty collapse. CausTab does not exhibit this failure. The method achieves consistently lower expected calibration error than both ERM and IRM.
+Across the four cycles of NHANES (16,773 participants), the UCI Heart Disease dataset (920 patients), and the synthetic data, CausTab matches or exceeds empirical risk minimization (ERM) in every experimental condition. Invariant Risk Minimization (IRM) degrades by up to 13.8 AUC points on spurious-dominant tabular data due to penalty collapse. CausTab does not exhibit this failure. The method achieves consistently lower expected calibration error than both ERM and IRM.
 
 A boundary condition applies: invariant learning fails when environments differ primarily in outcome prevalence rather than spurious correlations. The Spurious Dominance Index (SDI) provides a practical diagnostic for determining when invariant learning is likely to help.
 
