@@ -1,5 +1,10 @@
 # Why Invariant Risk Minimization Fails on Tabular Data: A Gradient Variance Solution
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![medRxiv](https://img.shields.io/badge/medRxiv-Preprint-red)]()
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
+
 Grold Otieno Mboya
 
 ---
@@ -8,11 +13,31 @@ Grold Otieno Mboya
 
 Standard machine learning models fail under distribution shift because they exploit spurious correlations that vary across environments. CausTab penalizes the variance of parameter gradients across training environments. Parameters responding to causal features receive consistent gradient signals and are not penalized. Parameters responding to spurious features receive inconsistent signals and are penalized.
 
-Across synthetic data, four cycles of NHANES (16,773 participants), and the UCI Heart Disease dataset (920 patients), CausTab matches or exceeds empirical risk minimization (ERM) in every experimental condition. Invariant Risk Minimization (IRM) degrades by up to 13.8 AUC points on spurious-dominant tabular data due to penalty collapse. CausTab does not exhibit this failure. The method achieves consistently lower expected calibration error than both ERM and IRM.
+Across four the cycles of NHANES (16,773 participants), the UCI Heart Disease dataset (920 patients), and the synthetic data, CausTab matches or exceeds empirical risk minimization (ERM) in every experimental condition. Invariant Risk Minimization (IRM) degrades by up to 13.8 AUC points on spurious-dominant tabular data due to penalty collapse. CausTab does not exhibit this failure. The method achieves consistently lower expected calibration error than both ERM and IRM.
 
 A boundary condition applies: invariant learning fails when environments differ primarily in outcome prevalence rather than spurious correlations. The Spurious Dominance Index (SDI) provides a practical diagnostic for determining when invariant learning is likely to help.
 
 ---
+
+## Why This Work Matters
+
+Distribution shift is a central problem in applied machine learning for healthcare and epidemiology. Models trained on historical data frequently fail when deployed in new hospitals, on later patient cohorts, or across different survey cycles. Existing invariant learning methods were developed for image data and have not been systematically evaluated on tabular data, despite tabular data being the dominant format in clinical and public health settings.
+
+This work provides three contributions of practical consequence. First, it documents that IRM, a widely cited invariant learning method, consistently underperforms standard ERM on tabular data, losing up to 13.8 AUC points in spurious-dominant settings. Second, it introduces CausTab, a gradient variance penalty that matches or exceeds ERM across all tested conditions and achieves lower calibration error. Third, it provides the Spurious Dominance Index, a diagnostic that tells practitioners whether invariant learning is worth attempting on their dataset before running any experiments.
+
+For epidemiologists and clinical researchers building prediction models that must generalize across time, institutions, or populations, this work offers a method that works when invariant learning is needed and does no harm when it is not.
+
+---
+
+## Penalty Definition
+
+For environment-specific gradients $\mathbf{g}^e(\theta) = \nabla_\theta \mathcal{L}^e(\theta)$, the CausTab penalty is:
+
+$$
+\Omega(\theta) = \frac{1}{|\theta|} \sum_{j=1}^{|\theta|} \text{Var}_{e \in \mathcal{E}} \left[ g_j^e(\theta) \right]
+$$
+
+Full derivation in the paper.
 
 ## Critical Results
 
@@ -68,11 +93,19 @@ The Spurious Dominance Index monotonically predicts CausTab's advantage over ERM
 
 ### 6. Ablation Study
 
-Removing or replacing components of CausTab has minimal impact on performance, confirming robustness.
+Removing or replacing components of CausTab has minimal impact on performance, confirming the method is not sensitive to specific design choices.
 
 ![Ablation](experiments/plots/science/fig7_ablation.png)
 
 ### 7. Summary
+
+CausTab provides a drop-in replacement for ERM and IRM when training on tabular data with multiple environments. The key findings are:
+
+- IRM fails on tabular data due to penalty collapse. Do not use it.
+- CausTab matches ERM in causal-dominant settings and exceeds ERM in spurious-dominant settings.
+- CausTab achieves better probability calibration than both ERM and IRM.
+- Check outcome prevalence across environments before applying any invariant learning method.
+- Use the Spurious Dominance Index to decide whether invariant learning is likely to help.
 
 ![Summary](experiments/plots/science/fig9_summary.png)
 
