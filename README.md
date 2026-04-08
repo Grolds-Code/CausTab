@@ -1,4 +1,4 @@
-# CausTab: Gradient Variance Regularization for Causal Invariant Representation Learning on Tabular Data
+# Why Invariant Risk Minimization Fails on Tabular Data: A Gradient Variance Solution
 
 Grold Otieno Mboya
 
