@@ -11,7 +11,7 @@ What we measure:
                 healthy person at random, AUC = probability the
                 model scores the hypertensive one higher
 - F1 Score    : harmonic mean of precision and recall
-                Good for imbalanced outcomes (ours is 35/65)
+                Good for imbalanced outcomes
 - ECE         : Expected Calibration Error
                 Measures if confidence matches reality
                 ECE=0.05 means when model says 70% confident,
